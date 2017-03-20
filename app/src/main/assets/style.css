@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+html {
+  height: 100%;
+}
+
+body {
+  overflow: scroll;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  min-height:100%;
+}
+
+#editor {
+  display: table-cell;
+
+  -webkit-user-select: auto !important;
+  -webkit-user-modify: read-write !important; /* << Issue here */
+
+  outline: 0px solid transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  /*padding: 10px;*/
+}
+
+#editor[placeholder]:empty:not(:focus):before {
+  content: attr(placeholder);
+  opacity: .5;
+}}
